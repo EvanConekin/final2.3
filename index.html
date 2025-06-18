@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./script.js">
     <script src="https://kit.fontawesome.com/b4ade9c213.js" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+    <script src="./openMenu.js"></script>
 
 </head>
 <body>
@@ -20,25 +20,56 @@
     </div>
 <ul class="nav__link--list">
     <li class="nav__link">
-        <a href="#" class="nav__link">About</a>
+        <a href="" class="nav__link
+        nav__link:after
+        "
+        >About</a>
     </li>
    <li class="nav__link">
-     <a href="#" class="nav__link">Blog</a>
+     <a href="" class="nav__link">Blog</a>
    </li>
    <li class="nav__link">
-    <a href="#" class="nav__link">Pricing</a>
+    <a href="#pricing" class="nav__link">Pricing</a>
 </li>
    <li class="nav__link">
-    <a href="#" class="nav__link">Contact Us</a>
+    <a href="" class="nav__link">Contact Us</a>
    </li>
    <li class="nav__link">
-    <a href="#" class="nav__link--login">Login</a>
+    <a href="" class="nav__link--login">Login</a>
    </li>
    <li class="nav__link">
-    <a href="#" class="nav__link nav__link--primary">Sign Up</a>
+    <a href="" class="nav__link nav__link--primary">Sign Up</a>
    </li>
 </ul>
     </div>
+</div>
+<button class="btn__menu" onclick="openMenu()">
+    <i class="fa-solid fa-bars"></i>
+</button>
+<div class="menu__backdrop">
+    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <ul class="menu__links">
+        <li class="menu__list">
+            <a href="#" class="menu__link" onclick="closeMenu()">About</a>
+        </li>
+        <li class="menu__list">
+            <a href="#" class="menu__link" onclick="closeMenu()">Blog</a>
+        </li>
+        <li class="menu__list">
+            <a href="#pricing" class="menu__link" onclick="closeMenu()">Pricing</a>
+        </li>
+        <li class="menu__list">
+            <a href="#" class="menu__link no-cursor" onclick="closeMenu()">Contact Us</a>
+        </li>
+        <li class="menu__list">
+            <a href="#" class="menu__link no-cursor" onclick="closeMenu()">Login</a>
+        </li>
+        <li class="menu__list">
+            <a href="#" class="menu__link" onclick="closeMenu()">Sign Up</a>
+        </li>
+    </ul>
 </div>
 </nav>
 <header>
@@ -405,7 +436,7 @@
                        <div class="footer__column--title">Products</div>
                       <a class="footer__column--link" href="#">Log In</a>
                       <a class="footer__column--link" href="#">Personal</a>
-                      <a class="footer__column--link" href="#">BUsiness</a>
+                      <a class="footer__column--link" href="#">Business</a>
                       <a class="footer__column--link" href="#">Team</a>
                     </div>
                     <div class="footer__column">
