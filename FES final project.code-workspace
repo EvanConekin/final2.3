@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"name": "FES final project",
+			"path": "FES final project"
+		},
+		{
+			"name": "mod 2-3",
+			"path": "mod 2-3"
+		},
+		{
+			"name": "assets fpmod2",
+			"path": "assets fpmod2"
+		},
+		{
+			"name": "assets",
+			"path": "assets"
+		},
+		{
+			"path": "index.js"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "FES final project"
+	}
+}
