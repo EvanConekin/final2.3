@@ -1197,6 +1197,15 @@ responsiveness
   text-align: center;
   
 }
+.feature__title {
+  font-size: 12px;
+}
+.feature__para {
+  font-size: 8px;
+}
+.feature__img--wrapper {
+  padding: 12px;
+}
 }
 
  @media (max-width:640px) {
@@ -1215,7 +1224,7 @@ responsiveness
   }
   
  .header__img {
-  visibility: hidden;
+  display: none;
  }
 
 .quality__row {
@@ -1238,8 +1247,20 @@ align-items: center;
 .start__button {
   visibility: hidden;
 }
-.feature {
+.features {
 width: calc(100%/2);
+}
+.feature__title {
+  font-size: 12px;
+}
+.feature__para {
+  font-size: 8px;
+}
+.feature__text {
+  padding-right: 12px;
+}
+.feature__img--wrapper {
+  padding: 10px;
 }
 .footer__logo {
   margin: 4px;
