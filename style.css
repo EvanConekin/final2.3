@@ -1247,9 +1247,7 @@ align-items: center;
 .start__button {
   visibility: hidden;
 }
-.features {
-width: calc(100%/2);
-}
+
 .feature__title {
   font-size: 12px;
 }
