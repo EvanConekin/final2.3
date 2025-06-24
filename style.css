@@ -36,7 +36,7 @@ btn {
 }
 
 
-.row{
+row{
 width: 100%;
 max-width: 1200px;
 margin: 0 auto;
@@ -144,6 +144,7 @@ border: none;
   text-align: center;
   border: none;
   color: white;
+  display: none;
   
 }
  .btn__menu--close {
@@ -197,8 +198,9 @@ color: white;
 /*header*/
 
 .header__container {
-  padding: 96px;
+max-width: 1200px;
   display: flex;
+  margin: 0 auto;
 }
 .header__row {
   width: 60%;
