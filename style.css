@@ -1033,7 +1033,6 @@ align-items: center;
 
 }
 .start__buttons--container {
-  width: 50%;
   display: flex;
   justify-content: flex-end;
 
@@ -1449,7 +1448,7 @@ responsiveness
 
 .steps__row{
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
 }
 .values__row {
@@ -1480,6 +1479,7 @@ margin-top: 24px;
 
 }
 .start__buttons--container {
+  display: flex;
   flex-direction: column;
 }
 .feature__row {
@@ -1546,7 +1546,7 @@ height: 16px;
 }
 .footer__copyright {
   margin-bottom: 32px;
-  font-size: 16px;
+  font-size: 14px;
 }
  }
 
