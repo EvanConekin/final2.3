@@ -40,13 +40,16 @@ h1{
 h2{
   font-size: 28px;
 }
-p ,
+h3 {
+  font-size: 20px;
+}
+p 
 h4 {
 font-size: 16px;
 }
 .row {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -157,31 +160,45 @@ border: none;
 }
 
 .btn__menu {
+  font-size: 20px;
   background:transparent;
-  font-size: 40px;
   text-align: center;
   border: none;
-  color: white;
   display: none;
+  cursor: pointer;
   transition: all 300ms ease;
   
 }
+.btn__menu:hover {
+  filter: invert(26%) sepia(94%)
+   saturate(7476%)
+   hue-rotate(261deg)
+    brightness(94%)
+     contrast(115%);
+}
+
  .btn__menu--close {
+  font-size: 20px;
   background-color: transparent;
-  position: absolute;
-  right: 12px;
-  top: 46px;
-  padding: 12px;
-  color:#cbd5e0;
+  border: none;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+
  }
 .menu__backdrop {
-  position: absolute;
-  background-color: #242424;
+  position: fixed;
+  background-color: #fff;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
+  right: 0;
+  height: 378px;
+  margin: 24px 16px;
+  padding: 32px;
+  border-radius: 8px;
+  border: 1px solid rgb(229, 231, 235);
+  z-index: 4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,6 +218,8 @@ border: none;
 }
 
 .menu__links {
+  width: 100vw;;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,8 +228,21 @@ border: none;
 padding: 24px 0;
 }
 .menu__link {
-  font-size: 24px;
-color: white;
+  font-size: 18px;
+color: #1a202c;
+font-weight: 600;
+line-height: 1.5;
+margin: 8px 0;
+padding-bottom: 4px;
+border-bottom: 2px solid transparent;
+}
+.menu__link--primary {
+  font-size: 18px;
+  color: #f7fafc;
+  padding: 12px 32px;
+  margin: 8px 0;
+  background: #6415ff;
+  border-radius: 500px;
 }
 
 
@@ -626,9 +658,9 @@ font-size: 36px;
 .values__list {
   display: flex;
 flex-direction: column;
-max-width: 320px;
 
 }
+
 .value:nth-child(1) ,.value:nth-child(2) {
   margin-top: 40px;
   margin-right: 32px;
@@ -713,7 +745,7 @@ pricing
 .pricing__section--tag {
   font-size: 16px;
   color: #6415ff;
-  letter-spacing: 1.6;
+  letter-spacing: 1.6px;
   font-weight: 700;
   text-transform: uppercase;
 
@@ -788,11 +820,14 @@ text-align: center;
 .plan__name {
   font-size: 20px;
   color: #1a202c;
+  font-weight: bold;
+  line-height: 1.625;
 
 }
 .plan__price {
   font-size: 48px;
   margin: 4px 0;
+  font-weight: 700;
 
 }
 .plan__duration {
@@ -918,6 +953,7 @@ padding: 96px 0;
   font-weight: 500;
   color: #7c8ba1;
   line-height: 1.625;
+  text-align: center;
   
 
 }
@@ -944,6 +980,7 @@ font-size: 16px;
 font-weight: 500;
 color: #4a5568;
 line-height: 1.625;
+text-align: center;
 
 }
 .testimonial__bottom {
@@ -967,10 +1004,17 @@ color: #243e63;
 line-height: 1.5;
 }
 .testimonial__title {
-font-size: 16px;
-font-weight: 500;
-color: #7c8ba1;
+font-size: 20px;
+font-weight: 700;
+color: #243e63;
 line-height: 1.5;
+}
+.testimonial__job {
+  font-size: 16px;
+  color: #7c8ba1;
+  font-weight: 500;
+  line-height: 1.5;
+
 }
 .testimonial__buttons {
   display: flex;
@@ -1193,22 +1237,43 @@ responsiveness
 */
 
 @media (max-width: 1280px){
-  header .row {
+ .header__row {
     align-items: flex-end;
   }
     .btn__menu {
     visibility: hidden;
 
   }
-   header .row {
-    align-items: flex-end;
-}
 }
 
 @media (max-width: 1024px) {
- 
+
+   .nav__link--list {
+    display: none;
+   }
+   .header__row {
+    flex-direction: column;
+    align-items: center;
+   }
+   .header__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   h1 {
+    font-size: 30px;
+   }
+   .header_title {
+    font-size: 30px;
+    text-align: center;
+   }
   .btn__menu  {
-    display: block;
+  display: block;
+  visibility: visible;
+  }
+  .plans {
+    flex-direction: column;
+    align-items: center;
   }
   .start__button {
     width: auto;
@@ -1271,6 +1336,16 @@ responsiveness
       display: flex;
       flex-direction: column;
     }
+    .values__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer__container {
+      padding: 80px 2px;
+    }
+    
   
     }
   
@@ -1288,7 +1363,7 @@ responsiveness
   .values__description,
   .values__img,
   .testimonials__description,
-  .testimonial__img {
+  .testimonial__img--wrapper {
     width: 100%;
     max-width: 448px;
   }
@@ -1300,6 +1375,20 @@ responsiveness
   .values__row {
     flex-direction: column-reverse;
   }
+  .values__description {
+    padding: 0;
+    margin-top: 64px;
+    text-align: center;
+  }
+  .values__title {
+    font-size: 30px;
+  }
+  .values__para {
+    font-size: 14px;
+    color: #7c8ba1;
+  }
+
+  
   .quality__description {
     padding: 0;
     margin-top: 64px;
@@ -1318,7 +1407,7 @@ responsiveness
       display: flex;
       flex-direction: column;
     }
-  #pricing .row {
+  .pricing__row {
     margin-top: 40px;
   }
   .h1 {
@@ -1332,17 +1421,8 @@ responsiveness
   .button {
     font-size: 18px;
   }
-   .btn__menu {
-    display: block;
-    visibility: visible;
-  }
-
-  .nav__link--list {
-    display: none;
-  }
-  .btn__menu {
-    display: block;
-  }
+  .h3 {font-size: 20px;}
+  
 
 
 .features__section--title {
@@ -1379,6 +1459,34 @@ responsiveness
   rgba(0,0,0,0.05) 0px 4px 6px -2px;
   transition: all 300ms ease;
 }
+.testimonial__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonials__description {
+  padding-left: 0;
+}
+.section__tag {
+  text-align: center;
+}
+.section__title {
+  font-size: 30px;
+  text-align: center;
+}
+.section__para {
+  font-size: 14px;
+}
+.testimonial__rating {
+  text-align: center;
+}
+.testimonial__title {
+  text-align: center;
+  margin-top: 16px;
+}
+.testimonial__para {
+  margin-bottom: 32px;
+}
 .footer__bottom {
   flex-direction: column;
   align-items: center;
@@ -1388,8 +1496,9 @@ responsiveness
   align-items: center;
   margin-top: 32px;
 }
-
 }
+
+
 
  @media (max-width:640px) {
   .container {
@@ -1402,8 +1511,42 @@ responsiveness
     margin: 8px 0;
     padding-bottom: 4px;
   }
+  .header__email {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+  }
+  .header__email--input {
+    width: 100%;
+    position: static;
+    padding: 16px 0;
+    padding-left: 32px;
+    line-height: 1.5;
+  } 
+  .header__email--button {
+    width: 100%;
+  }
+  .header__row {
+    width: 100%;
+  }
   main {
     margin-bottom: 80px;
+  }
+  .pricing__section--title {
+    font-size: 36px;
+    margin: 16px 0;
+  }
+  .pricing__section--para {
+    font-size: 14px;
+
+  }
+  .plan__price {
+    font-size: 36px;
+  }
+  .value__para {
+    text-align: center;
+    max-width: 330px;
+    color: #7c8ba1;
   }
   .quality__description {
     width: 100%;
@@ -1418,12 +1561,11 @@ responsiveness
     font-size: 14px;
   }
 
-  
-
 .quality__row {
   display: flex;
   flex-direction: column-reverse
 }
+
 .steps__description {
   width: 100%;
   max-width: 448px;
@@ -1451,20 +1593,53 @@ responsiveness
   flex-direction: column;
   align-items: center;
 }
-.values__row {
-  display: flex;
-  flex-direction:column;
-
+.testimonial__container {
+  padding: 80px 0;
 }
+.testimonial__para {
+  margin-top: 32px;
+}
+.testimonial__bottom {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+}
+.testimonial__profile {
+  flex-direction: column;
+  align-items: center;
+}
+.testimonial__img2 {
+  height: 64px;
+  width: 64px;
+}
+.testimonial__job {
+  margin-left: 0;
+  margin-top: 8px;
+}
+.testimonial__name {
+  text-align: center;
+}
+.testimonial__title {
+  font-size: 20px;
+  color: #243e63;
+}
+.testimonial__buttons {
+  margin-top: 32px;
+}
+footer {
+  width: 100%;
+  padding: 80px 0;
+}
+
 .footer__columns {
-  margin: -48px;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 .footer__column {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
   width: auto;
-  padding: o 16px;
+  padding: 0 16px;
   text-align: center;
   align-items: center;;
 }
@@ -1475,7 +1650,7 @@ margin-top: 24px;
 .start__button {
   padding: 12px 24px;
   font-size: 14px;
-  margin: 1px 0 1px 1px;
+  margin: 12px 0 1px 1px;
 
 }
 .start__buttons--container {
@@ -1520,6 +1695,9 @@ height: 16px;
   justify-content: center;
   margin-left: 2px;
   
+}
+.footer__column--link {
+  font-size: 14px;
 }
 .footer__column--title {
   margin-left: 2px;
